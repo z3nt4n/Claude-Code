@@ -1154,6 +1154,23 @@ ul, ol { list-style: none; }
   .chat-panel  { width: calc(100vw - 2rem); max-height: 420px; }
 }
 
+/* ---- Balloon celebration effect ---- */
+.balloon {
+  position: fixed;
+  bottom: -100px;
+  z-index: 9999;
+  pointer-events: none;
+  user-select: none;
+  animation: balloonFloat linear forwards;
+}
+
+@keyframes balloonFloat {
+  0%   { transform: translateY(0)      rotate(-6deg); opacity: 1; }
+  40%  { transform: translateY(-45vh)  rotate(6deg);  opacity: 1; }
+  80%  { transform: translateY(-90vh)  rotate(-4deg); opacity: 0.6; }
+  100% { transform: translateY(-115vh) rotate(2deg);  opacity: 0; }
+}
+
 /* Wide: lock services to 4 columns */
 @media (min-width: 1024px) {
   .services__grid { grid-template-columns: repeat(4, 1fr); }

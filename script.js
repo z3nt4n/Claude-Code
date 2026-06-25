@@ -169,6 +169,37 @@ document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
   });
 })();
 
+/* ---- Post-submission celebration ---- */
+function onSubmissionSuccess() {
+  /* Voice */
+  if (window.speechSynthesis) {
+    window.speechSynthesis.cancel();
+    const utter = new SpeechSynthesisUtterance('hahaha well done, thank you for your submission');
+    utter.rate  = 1;
+    utter.pitch = 1.2;
+    window.speechSynthesis.speak(utter);
+  }
+
+  /* Balloons */
+  const EMOJIS = ['🎈', '🎉', '🎊', '🎈', '🎈'];
+  const COUNT  = 20;
+  for (let i = 0; i < COUNT; i++) {
+    setTimeout(() => {
+      const b = document.createElement('div');
+      b.className  = 'balloon';
+      b.textContent = EMOJIS[Math.floor(Math.random() * EMOJIS.length)];
+      b.style.cssText = [
+        `left:${5 + Math.random() * 90}vw`,
+        `font-size:${1.8 + Math.random() * 1.8}rem`,
+        `animation-duration:${2.8 + Math.random() * 2.2}s`,
+        `animation-delay:${Math.random() * 0.3}s`,
+      ].join(';');
+      document.body.appendChild(b);
+      b.addEventListener('animationend', () => b.remove());
+    }, i * 90);
+  }
+}
+
 /* ---- Enquiry Form with FormSubmit AJAX ---- */
 (function initForm() {
   const form        = document.getElementById('enquiryForm');
@@ -273,6 +304,7 @@ document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
       /* Success: hide form, show confirmation */
       form.hidden        = true;
       formSuccess.hidden = false;
+      onSubmissionSuccess();
 
     } catch {
       /* Error: show inline error, restore button */
