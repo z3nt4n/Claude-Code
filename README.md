@@ -6,6 +6,10 @@ A static, single-page marketing website for a fictional investment advisory firm
 
 [https://z3nt4n.github.io/Claude-Code/](https://z3nt4n.github.io/Claude-Code/)
 
+## Preview
+
+![Sterling & Vale Advisory website preview](Screenshot/z3nt4n%20website.png)
+
 ## Tech Stack
 
 - Plain HTML, CSS, and JavaScript — no frameworks or build tools
