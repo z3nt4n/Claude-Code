@@ -4,9 +4,9 @@
 
 /* ---- Design Tokens ---- */
 :root {
-  --navy:        #1e0f4e;
-  --slate:       #4a2d9e;
-  --slate-light: #6b46c1;
+  --navy:        #3b0a0a;
+  --slate:       #7f1d1d;
+  --slate-light: #b91c1c;
   --gold:        #c9a84c;
   --gold-dark:   #a8883a;
   --off-white:   #f5f4f0;
@@ -207,7 +207,7 @@ ul, ol { list-style: none; }
   min-height: 85vh;
   display: flex;
   align-items: center;
-  background: linear-gradient(135deg, #1e0f4e 0%, #4a2d9e 58%, #6b46c1 100%);
+  background: linear-gradient(135deg, #3b0a0a 0%, #7f1d1d 58%, #b91c1c 100%);
   padding-top: 68px; /* navbar clearance */
   position: relative;
   overflow: hidden;
@@ -588,7 +588,7 @@ ul, ol { list-style: none; }
 .form-group textarea:focus {
   outline: none;
   border-color: var(--slate);
-  box-shadow: 0 0 0 3px rgba(74,45,158,0.14);
+  box-shadow: 0 0 0 3px rgba(127,29,29,0.14);
 }
 
 .form-group input.invalid,
