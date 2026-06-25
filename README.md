@@ -21,7 +21,8 @@ A static, single-page marketing website for a fictional investment advisory firm
 |------|---------|
 | `index.html` | All markup: Navbar, Hero, Services, Testimonials, Contact, Footer |
 | `styles.css` | All styles and CSS design tokens |
-| `script.js` | Carousel, form submission, navbar, and scroll-reveal animations |
+| `script.js` | Carousel, form submission, navbar, scroll-reveal animations, WhatsApp widget |
+| `tests/` | Playwright end-to-end tests (form submission, widget, social links) |
 
 ## Design Tokens
 
@@ -39,8 +40,13 @@ No build step needed — just open `index.html` in a browser.
 ## Contact Form
 
 The enquiry form uses [FormSubmit](https://formsubmit.co/) for serverless email delivery.
-To activate: replace `REPLACE_WITH_YOUR_EMAIL` in `script.js` with a real address,
-submit the form once, then click the activation link in the confirmation email.
+The destination address is configured in `script.js`. On first deployment, FormSubmit sends
+an activation email — click the link to enable delivery.
+
+## WhatsApp Chat Widget
+
+A floating WhatsApp button (bottom-right) opens a branded panel with suggested topics.
+Each chip or custom message opens WhatsApp pre-filled to `+6597977715`.
 
 ## Deployment
 

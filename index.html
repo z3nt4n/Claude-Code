@@ -324,12 +324,93 @@
         <a href="#testimonials">Testimonials</a>
         <a href="#contact">Contact</a>
       </nav>
+      <div class="footer__social" aria-label="Follow us on social media">
+        <a href="#" class="social-link" aria-label="Instagram" rel="noopener">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+            <rect x="2" y="2" width="20" height="20" rx="5" ry="5" stroke="currentColor" stroke-width="1.8"/>
+            <circle cx="12" cy="12" r="4.5" stroke="currentColor" stroke-width="1.8"/>
+            <circle cx="17.5" cy="6.5" r="1" fill="currentColor"/>
+          </svg>
+        </a>
+        <a href="#" class="social-link" aria-label="Facebook" rel="noopener">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+            <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </a>
+        <a href="#" class="social-link" aria-label="X (formerly Twitter)" rel="noopener">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+            <path d="M4 4l16 16M4 20L20 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+          </svg>
+        </a>
+      </div>
     </div>
     <div class="container footer__bottom">
       <p class="footer__disclaimer">This website is for informational purposes only and does not constitute financial advice.</p>
       <p class="footer__copy">&copy; <span id="year"></span> Sterling &amp; Vale Advisory. All rights reserved.</p>
     </div>
   </footer>
+
+  <!-- ===== WHATSAPP CHAT WIDGET ===== -->
+  <div class="chat-widget" id="chatWidget">
+    <button class="chat-toggle" id="chatToggle" aria-label="Chat with us on WhatsApp" aria-expanded="false" aria-controls="chatPanel">
+      <!-- WhatsApp icon -->
+      <svg class="chat-icon" width="28" height="28" viewBox="0 0 32 32" fill="currentColor" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+        <path d="M16 2C8.27 2 2 8.27 2 16c0 2.46.66 4.76 1.8 6.75L2 30l7.5-1.76A13.94 13.94 0 0 0 16 30c7.73 0 14-6.27 14-14S23.73 2 16 2zm0 25.5a11.46 11.46 0 0 1-5.84-1.59l-.42-.25-4.46 1.05 1.08-4.34-.28-.45A11.5 11.5 0 1 1 16 27.5zm6.32-8.63c-.35-.17-2.05-1.01-2.37-1.13-.32-.12-.55-.17-.78.17-.23.35-.88 1.13-1.08 1.36-.2.23-.4.26-.74.09-.35-.17-1.47-.54-2.8-1.73-1.03-.92-1.73-2.06-1.93-2.41-.2-.35-.02-.54.15-.71.15-.15.35-.4.52-.6.17-.2.23-.35.35-.58.12-.23.06-.43-.03-.6-.09-.17-.78-1.88-1.07-2.57-.28-.67-.57-.58-.78-.59h-.66c-.23 0-.6.09-.91.43-.32.35-1.2 1.17-1.2 2.85s1.23 3.31 1.4 3.54c.17.23 2.42 3.7 5.86 5.19.82.35 1.46.56 1.96.72.82.26 1.57.22 2.16.13.66-.1 2.05-.84 2.34-1.65.29-.81.29-1.5.2-1.65-.09-.15-.32-.23-.67-.4z"/>
+      </svg>
+      <!-- Close icon -->
+      <svg class="close-icon" width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+        <path d="M18 6L6 18M6 6l12 12" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/>
+      </svg>
+    </button>
+
+    <div class="chat-panel" id="chatPanel" hidden role="dialog" aria-label="Chat with Sterling &amp; Vale on WhatsApp" aria-modal="false">
+      <div class="chat-header">
+        <div class="chat-avatar" aria-hidden="true">SV</div>
+        <div class="chat-header__info">
+          <span class="chat-title">Sterling &amp; Vale Advisory</span>
+          <span class="chat-status"><span class="chat-dot" aria-hidden="true"></span>Typically replies in minutes</span>
+        </div>
+        <button class="chat-close" id="chatClose" aria-label="Close chat">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M18 6L6 18M6 6l12 12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+        </button>
+      </div>
+
+      <div class="chat-body">
+        <div class="chat-greeting">
+          <div class="chat-msg chat-msg--bot">
+            <div class="chat-bubble">
+              Hi there! 👋 Welcome to <strong>Sterling &amp; Vale Advisory</strong>. How can we help you today? Select a topic below or type your own question.
+            </div>
+            <span class="chat-time" aria-hidden="true">Now</span>
+          </div>
+        </div>
+        <div class="chat-chips" role="list" aria-label="Suggested topics">
+          <button class="chat-chip" role="listitem" data-msg="Hi! I'd like to book a free 30-minute wealth strategy session. Could you help me get started?">📅 Book a free session</button>
+          <button class="chat-chip" role="listitem" data-msg="Hi! I'd like to learn more about your wealth planning services. What does the process look like?">💰 Wealth Planning</button>
+          <button class="chat-chip" role="listitem" data-msg="Hi! I'm interested in retirement planning and would like to explore my options. Can we chat?">🎯 Retirement Strategy</button>
+          <button class="chat-chip" role="listitem" data-msg="Hi! I'd like to know more about portfolio management at Sterling & Vale. How do you manage risk?">📈 Portfolio Management</button>
+          <button class="chat-chip" role="listitem" data-msg="Hi! I'd like to discuss estate planning and how to protect my family's financial future.">🏛️ Estate Planning</button>
+        </div>
+      </div>
+
+      <div class="chat-form-wrap">
+        <div class="chat-input-row">
+          <input type="text" id="chatInput" class="chat-input" placeholder="Type a message…" aria-label="Type your message" maxlength="500" autocomplete="off" />
+          <button id="chatSend" class="chat-send" aria-label="Send on WhatsApp">
+            <svg width="20" height="20" viewBox="0 0 32 32" fill="currentColor" aria-hidden="true">
+              <path d="M16 2C8.27 2 2 8.27 2 16c0 2.46.66 4.76 1.8 6.75L2 30l7.5-1.76A13.94 13.94 0 0 0 16 30c7.73 0 14-6.27 14-14S23.73 2 16 2zm0 25.5a11.46 11.46 0 0 1-5.84-1.59l-.42-.25-4.46 1.05 1.08-4.34-.28-.45A11.5 11.5 0 1 1 16 27.5zm6.32-8.63c-.35-.17-2.05-1.01-2.37-1.13-.32-.12-.55-.17-.78.17-.23.35-.88 1.13-1.08 1.36-.2.23-.4.26-.74.09-.35-.17-1.47-.54-2.8-1.73-1.03-.92-1.73-2.06-1.93-2.41-.2-.35-.02-.54.15-.71.15-.15.35-.4.52-.6.17-.2.23-.35.35-.58.12-.23.06-.43-.03-.6-.09-.17-.78-1.88-1.07-2.57-.28-.67-.57-.58-.78-.59h-.66c-.23 0-.6.09-.91.43-.32.35-1.2 1.17-1.2 2.85s1.23 3.31 1.4 3.54c.17.23 2.42 3.7 5.86 5.19.82.35 1.46.56 1.96.72.82.26 1.57.22 2.16.13.66-.1 2.05-.84 2.34-1.65.29-.81.29-1.5.2-1.65-.09-.15-.32-.23-.67-.4z"/>
+            </svg>
+          </button>
+        </div>
+        <p class="chat-wa-label">
+          <svg width="13" height="13" viewBox="0 0 32 32" fill="#25D366" aria-hidden="true"><path d="M16 2C8.27 2 2 8.27 2 16c0 2.46.66 4.76 1.8 6.75L2 30l7.5-1.76A13.94 13.94 0 0 0 16 30c7.73 0 14-6.27 14-14S23.73 2 16 2z"/></svg>
+          Opens in WhatsApp
+        </p>
+      </div>
+    </div>
+  </div>
 
   <script src="script.js"></script>
 </body>

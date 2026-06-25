@@ -109,6 +109,66 @@ document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
   startAuto();
 })();
 
+/* ---- WhatsApp Chat Widget ---- */
+(function initWhatsAppWidget() {
+  const WA_NUMBER = '6597977715';
+  const WA_BASE   = `https://wa.me/${WA_NUMBER}?text=`;
+
+  const widget   = document.getElementById('chatWidget');
+  const toggle   = document.getElementById('chatToggle');
+  const panel    = document.getElementById('chatPanel');
+  const closeBtn = document.getElementById('chatClose');
+  const input    = document.getElementById('chatInput');
+  const sendBtn  = document.getElementById('chatSend');
+  const chips    = document.querySelectorAll('.chat-chip');
+
+  let isOpen = false;
+
+  function openWidget() {
+    isOpen = true;
+    panel.hidden = false;
+    toggle.setAttribute('aria-expanded', 'true');
+    toggle.classList.add('is-open');
+    setTimeout(() => input && input.focus(), 280);
+  }
+
+  function closeWidget() {
+    isOpen = false;
+    panel.hidden = true;
+    toggle.setAttribute('aria-expanded', 'false');
+    toggle.classList.remove('is-open');
+  }
+
+  function sendToWhatsApp(text) {
+    window.open(WA_BASE + encodeURIComponent(text), '_blank', 'noopener,noreferrer');
+  }
+
+  toggle.addEventListener('click', () => (isOpen ? closeWidget() : openWidget()));
+  closeBtn.addEventListener('click', closeWidget);
+
+  chips.forEach(chip => {
+    chip.addEventListener('click', () => sendToWhatsApp(chip.dataset.msg));
+  });
+
+  function handleSend() {
+    const text = input ? input.value.trim() : '';
+    if (!text) return;
+    sendToWhatsApp(text);
+    if (input) input.value = '';
+  }
+
+  if (sendBtn)  sendBtn.addEventListener('click', handleSend);
+  if (input) {
+    input.addEventListener('keydown', e => {
+      if (e.key === 'Enter') { e.preventDefault(); handleSend(); }
+    });
+  }
+
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape' && isOpen) closeWidget();
+  });
+})();
+
 /* ---- Enquiry Form with FormSubmit AJAX ---- */
 (function initForm() {
   const form        = document.getElementById('enquiryForm');
@@ -122,7 +182,7 @@ document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
   // On the very first submission to a new address, FormSubmit sends a confirmation
   // email to that address. The form will only deliver messages AFTER you click the
   // activation link in that email. Subsequent submissions will arrive normally.
-  const ENDPOINT = 'https://formsubmit.co/ajax/REPLACE_WITH_YOUR_EMAIL';
+  const ENDPOINT = 'https://formsubmit.co/ajax/zen.tan@redbeaconam.com';
 
   const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
