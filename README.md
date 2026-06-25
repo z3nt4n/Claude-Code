@@ -27,8 +27,8 @@ A static, single-page marketing website for a fictional investment advisory firm
 
 | Token | Value | Usage |
 |-------|-------|-------|
-| `--navy` | `#1b2a4a` | Primary colour |
-| `--slate` | `#3d5170` | Secondary colour |
+| `--navy` | `#1e0f4e` | Primary colour (deep purple) |
+| `--slate` | `#4a2d9e` | Secondary colour (medium purple) |
 | `--gold` | `#c9a84c` | Accent colour |
 | `--off-white` | `#f5f4f0` | Page background |
 

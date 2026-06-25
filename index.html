@@ -42,10 +42,13 @@
     <section class="hero" id="home" aria-labelledby="heroHeading">
       <div class="container hero__inner">
         <div class="hero__content reveal">
-          <p class="hero__eyebrow">Trusted Wealth Management Since 2004</p>
-          <h1 id="heroHeading">Grow and protect<br>what matters most.</h1>
-          <p class="hero__sub">Sterling &amp; Vale Advisory partners with professionals and families to build lasting financial legacies — with clarity, discipline, and care.</p>
-          <a href="#contact" class="btn btn--gold" id="ctaBtn">Book a Consultation</a>
+          <p class="hero__eyebrow">Free Strategy Session &mdash; Limited Spots Available</p>
+          <h1 id="heroHeading">Your wealth deserves<br>a plan that works.</h1>
+          <p class="hero__sub">Stop second-guessing your financial future. Book your complimentary 30-minute wealth strategy session with a Sterling &amp; Vale advisor &mdash; walk away with a clear roadmap, completely free.</p>
+          <div class="hero__ctas">
+            <a href="#contact" class="btn btn--gold" id="ctaBtn">Claim My Free Session &rarr;</a>
+            <span class="hero__nudge">Only 3 spots left this month</span>
+          </div>
         </div>
         <div class="hero__stats reveal" aria-label="Firm at a glance">
           <div class="stat">
@@ -208,80 +211,101 @@
     <!-- ===== CONTACT / ENQUIRY FORM ===== -->
     <section class="contact" id="contact" aria-labelledby="contactHeading">
       <div class="container">
-        <div class="section-header reveal">
-          <p class="section-eyebrow">Get In Touch</p>
-          <h2 id="contactHeading">Begin your advisory<br>relationship today.</h2>
-          <p class="section-sub">Complete the form below and one of our advisors will be in touch within one business day.</p>
-        </div>
+        <div class="contact__layout">
 
-        <div class="form-wrap reveal">
-          <form id="enquiryForm" class="enquiry-form" novalidate aria-label="Enquiry form">
-
-            <!-- Honeypot: hidden from real users to reduce spam -->
-            <input type="text" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true" class="honey" />
-
-            <div class="form-row">
-              <div class="form-group">
-                <label for="fullName">Full Name <span aria-hidden="true">*</span></label>
-                <input type="text" id="fullName" name="fullName" required autocomplete="name" placeholder="Jane Smith" />
-                <span class="field-error" aria-live="polite"></span>
-              </div>
-              <div class="form-group">
-                <label for="email">Email Address <span aria-hidden="true">*</span></label>
-                <input type="email" id="email" name="email" required autocomplete="email" placeholder="jane@example.com" />
-                <span class="field-error" aria-live="polite"></span>
-              </div>
-            </div>
-
-            <div class="form-row">
-              <div class="form-group">
-                <label for="phone">Phone Number <span class="optional">(optional)</span></label>
-                <input type="tel" id="phone" name="phone" autocomplete="tel" placeholder="+1 (555) 000-0000" />
-              </div>
-              <div class="form-group">
-                <label for="interest">Investment Interest <span aria-hidden="true">*</span></label>
-                <select id="interest" name="interest" required>
-                  <option value="" disabled selected>Select a service…</option>
-                  <option value="Wealth Planning">Wealth Planning</option>
-                  <option value="Retirement Strategy">Retirement Strategy</option>
-                  <option value="Portfolio Management">Portfolio Management</option>
-                  <option value="Estate Planning">Estate Planning</option>
-                  <option value="Other">Other</option>
-                </select>
-                <span class="field-error" aria-live="polite"></span>
-              </div>
-            </div>
-
-            <div class="form-group">
-              <label for="message">Your Enquiry <span aria-hidden="true">*</span></label>
-              <textarea id="message" name="message" required rows="5"
-                        placeholder="Tell us a little about your situation and what you're hoping to achieve…"></textarea>
-              <span class="field-error" aria-live="polite"></span>
-            </div>
-
-            <div class="form-footer">
-              <button type="submit" class="btn btn--gold btn--full" id="submitBtn">Send Enquiry</button>
-              <p class="form-note">We never share your information with third parties.</p>
-            </div>
-
-            <div class="form-status form-status--error" id="formError" role="alert" aria-live="assertive" hidden>
-              Something went wrong — please try again or email us directly.
-            </div>
-
-          </form>
-
-          <div class="form-success" id="formSuccess" hidden role="status" aria-live="polite">
-            <div class="form-success__icon" aria-hidden="true">
-              <svg width="52" height="52" viewBox="0 0 52 52" fill="none">
-                <circle cx="26" cy="26" r="24" stroke="currentColor" stroke-width="2"/>
-                <path d="M15 26L22 33L37 18" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+          <!-- Offer panel -->
+          <div class="contact__offer reveal">
+            <span class="offer-badge">No Cost &middot; No Obligation</span>
+            <h2 id="contactHeading" class="offer-heading">Claim Your Free<br>Wealth Strategy Session</h2>
+            <p class="offer-sub">In your complimentary 30-minute call, a senior Sterling &amp; Vale advisor will give you a personalised roadmap — whether you become a client or not.</p>
+            <ul class="offer-list">
+              <li>Personalised portfolio health-check</li>
+              <li>Retirement readiness snapshot</li>
+              <li>Hidden tax-saving opportunities</li>
+              <li>Written action plan — yours to keep</li>
+            </ul>
+            <div class="offer-urgency">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                <circle cx="8" cy="8" r="7" stroke="currentColor" stroke-width="1.5"/>
+                <path d="M8 4.5V8.5L10.5 10.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
               </svg>
+              Only <strong>3 spots</strong> remaining this month
             </div>
-            <h3>Thank you for reaching out.</h3>
-            <p>We've received your enquiry and will be in touch within one business day.</p>
+            <p class="offer-social">Rated 4.9/5 by 200+ clients &nbsp;&middot;&nbsp; 98% client retention since 2004</p>
           </div>
-        </div>
 
+          <!-- Form panel -->
+          <div class="form-wrap reveal">
+            <form id="enquiryForm" class="enquiry-form" novalidate aria-label="Enquiry form">
+
+              <p class="form-intro">Reserve your free session below</p>
+
+              <!-- Honeypot: hidden from real users to reduce spam -->
+              <input type="text" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true" class="honey" />
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="fullName">Full Name <span aria-hidden="true">*</span></label>
+                  <input type="text" id="fullName" name="fullName" required autocomplete="name" placeholder="Jane Smith" />
+                  <span class="field-error" aria-live="polite"></span>
+                </div>
+                <div class="form-group">
+                  <label for="email">Email Address <span aria-hidden="true">*</span></label>
+                  <input type="email" id="email" name="email" required autocomplete="email" placeholder="jane@example.com" />
+                  <span class="field-error" aria-live="polite"></span>
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="phone">Phone Number <span class="optional">(optional)</span></label>
+                  <input type="tel" id="phone" name="phone" autocomplete="tel" placeholder="+1 (555) 000-0000" />
+                </div>
+                <div class="form-group">
+                  <label for="interest">Primary Goal <span aria-hidden="true">*</span></label>
+                  <select id="interest" name="interest" required>
+                    <option value="" disabled selected>What matters most to you?</option>
+                    <option value="Wealth Planning">Grow My Wealth</option>
+                    <option value="Retirement Strategy">Retire on My Terms</option>
+                    <option value="Portfolio Management">Protect My Portfolio</option>
+                    <option value="Estate Planning">Secure My Family's Future</option>
+                    <option value="Other">Something Else</option>
+                  </select>
+                  <span class="field-error" aria-live="polite"></span>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="message">Your Biggest Financial Challenge <span aria-hidden="true">*</span></label>
+                <textarea id="message" name="message" required rows="4"
+                          placeholder="Tell us what's on your mind financially — we'll address it directly in your free session…"></textarea>
+                <span class="field-error" aria-live="polite"></span>
+              </div>
+
+              <div class="form-footer">
+                <button type="submit" class="btn btn--gold btn--full" id="submitBtn">Claim My Free Session &rarr;</button>
+                <p class="form-note">Your details are 100% private. We never share your information with third parties.</p>
+              </div>
+
+              <div class="form-status form-status--error" id="formError" role="alert" aria-live="assertive" hidden>
+                Something went wrong — please try again or email us directly.
+              </div>
+
+            </form>
+
+            <div class="form-success" id="formSuccess" hidden role="status" aria-live="polite">
+              <div class="form-success__icon" aria-hidden="true">
+                <svg width="52" height="52" viewBox="0 0 52 52" fill="none">
+                  <circle cx="26" cy="26" r="24" stroke="currentColor" stroke-width="2"/>
+                  <path d="M15 26L22 33L37 18" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </div>
+              <h3>Your session is reserved.</h3>
+              <p>We'll be in touch within one business day to confirm your free 30-minute strategy call.</p>
+            </div>
+          </div>
+
+        </div>
       </div>
     </section>
 
